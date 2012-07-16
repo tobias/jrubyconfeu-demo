@@ -1,0 +1,18 @@
+// Place all the styles related to the ideas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ideas {
+    .text {
+        font-size: 18px;
+    }
+    .time {
+        padding-left: 10px;
+    }
+}
+
+.field {
+    input[type="submit"] {
+        font-size: 20px;
+    }
+}

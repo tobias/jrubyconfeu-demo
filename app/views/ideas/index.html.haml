@@ -1,0 +1,14 @@
+
+= render 'form'
+
+%hr
+
+%table.ideas
+  - @ideas.each do |idea|
+    %tr
+      %td.text{:colspan=>2}= idea.text
+    %tr
+      %td.time= idea.created_at.to_formatted_s(:db)
+      %td= link_to 'Trash It', idea, :confirm => 'Are you sure?', :method => :delete
+
+
