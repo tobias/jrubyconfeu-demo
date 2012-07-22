@@ -6,11 +6,22 @@
     .text {
         font-size: 1.6em;
     }
+   .controls {
+        font-size: 0.8em;
+    }
+}
+
+.tweets {
+    .text {
+        font-size: 1.2em;
+        .user {
+            font-style: italic;
+        }
+    }
+}
+.ideas, .tweets {
     .time {
         padding-left: 10px;
-    }
-    .controls {
-        font-size: 0.8em;
     }
 }
 
@@ -18,4 +29,9 @@
     input[type="submit"] {
         font-size: 20px;
     }
+}
+
+.left, .right {
+    width: 50%;
+    float: left;
 }
