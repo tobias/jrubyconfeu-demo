@@ -35,3 +35,12 @@
     width: 50%;
     float: left;
 }
+
+@for $i from 8 through 19 {
+    $adjusted-score: $i - 10;
+    .score-#{$i} {
+        font-size: 100 + $adjusted-score * 10%;
+        opacity: 0.7 + $adjusted-score * 0.1;
+    }
+}
+  

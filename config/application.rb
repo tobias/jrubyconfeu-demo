@@ -2,6 +2,8 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+require 'torquebox-stomp'
+
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -14,6 +16,8 @@ module Ideabox
       # Use TorqueBox::Infinispan::Cache for the Rails cache store
   config.cache_store = :torque_box_store
 
+    config.middleware.use TorqueBox::Stomp::StompJavascriptClientProvider
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
