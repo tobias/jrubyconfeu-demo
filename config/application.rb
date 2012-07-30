@@ -2,7 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-require 'torquebox-stomp'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -14,9 +13,12 @@ end
 module Ideabox
   class Application < Rails::Application
       # Use TorqueBox::Infinispan::Cache for the Rails cache store
-  config.cache_store = :torque_box_store
+    config.cache_store = :torque_box_store
 
-    config.middleware.use TorqueBox::Stomp::StompJavascriptClientProvider
+    if ENV['TORQUEBOX_APP_NAME']
+      require 'torquebox-stomp'
+      config.middleware.use TorqueBox::Stomp::StompJavascriptClientProvider
+    end
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
