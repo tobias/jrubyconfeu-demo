@@ -6,11 +6,19 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
-Ideas.create([
-              {:text => "An iPhone app that shaves your legs."},
-              {:text => "A pill that gives you jetlag so you can get used to it."},
-              {:text => "Dogs should come with free cats."},
-              {:text => "Create Justin Bieber bobble head dolls - call them 'Biebblers'."},
-              {:text => "Don't give live demos."},
-              {:text => "An Android iOS emulator."}
-             ])
+require 'idea'
+class ::Idea
+  def post_to_twitter
+    #no-op
+  end
+end
+
+
+Idea.create([
+             {:text => "An iPhone app that shaves your legs."},
+             {:text => "A pill that gives you jetlag so you can get used to it."},
+             {:text => "Dogs should come with free cats."},
+             {:text => "Create Justin Bieber bobble head dolls - call them 'Biebblers'."},
+             {:text => "Don't give live demos."},
+             {:text => "An Android iOS emulator."}
+            ])
