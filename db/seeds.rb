@@ -13,6 +13,7 @@ class ::Idea
   end
 end
 
+Idea.destroy_all
 
 Idea.create([
              {:text => "An iPhone app that shaves your legs."},
