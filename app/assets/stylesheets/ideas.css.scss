@@ -36,7 +36,7 @@
     float: left;
 }
 
-@for $i from 8 through 19 {
+@for $i from 6 through 22 {
     $adjusted-score: $i - 10;
     .score-#{$i} {
         font-size: 100 + $adjusted-score * 10%;
