@@ -20,6 +20,5 @@ Idea.create([
              {:text => "A pill that gives you jetlag so you can get used to it."},
              {:text => "Dogs should come with free cats."},
              {:text => "Create Justin Bieber bobble head dolls - call them 'Biebblers'."},
-             {:text => "Don't give live demos."},
              {:text => "An Android iOS emulator."}
             ])
