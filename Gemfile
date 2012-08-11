@@ -45,6 +45,6 @@ gem 'haml-rails', '>= 0.3.4', :group => :development
 
 gem "twitter4j4r", '0.1.0'
 
-gem "torquebox", "2.1.0"
-gem "torquebox-rake-support", "2.1.0"
+gem "torquebox", "~> 2.1.0"
+gem "torquebox-rake-support", "~> 2.1.0"
 
