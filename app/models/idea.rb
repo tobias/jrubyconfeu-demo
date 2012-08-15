@@ -4,6 +4,7 @@ class Idea < ActiveRecord::Base
   default_scope :order => 'created_at desc'
 
   after_create :post_to_twitter
+  always_background :post_to_twitter
 
   def post_to_twitter
     puts "Posting '#{text} #billsidea' to twitter"
